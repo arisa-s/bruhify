@@ -1,9 +1,7 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Compile the project
 
-
-To compile the project, you can run:
+From the root directory, you can run:
 
 ### `npm run build`
 
