@@ -1,17 +1,17 @@
 {
   "manifest_version": 2,
-  "name": "My Extension",
-  "description": "This extension is a starting point to create a real Chrome extension",
+  "name": "Bruhify",
+  "description": "This extension bruhify your contents",
   "version": "0.0.1",
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "logo-sm.png",
+    "48": "logo-sm.png",
+    "128": "logo-md.png"
   },
-  "content_security_policy": "script-src 'self' 'sha256-kZDFgKa1t/DsZf8mA+gkMxj04F46gVln4uzr8PRqjFg='; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-/P/ZF5KQba+x47h3Y77lpAqec1o/FEK12qZ9KOKlgs8='; object-src 'self'",
   "permissions": []
 }
