@@ -22,6 +22,5 @@
     "48": "logo-sm.png",
     "128": "logo-md.png"
   },
-  "content_security_policy": "script-src 'self' 'sha256-/P/ZF5KQba+x47h3Y77lpAqec1o/FEK12qZ9KOKlgs8='; object-src 'self'",
   "permissions": []
 }
