@@ -1,3 +1,4 @@
+/*global chrome*/
 import './App.css';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
@@ -21,10 +22,17 @@ const PurpleSwitch = withStyles({
 
 function App() {
   const [isBruh, setIsBruh] = React.useState(false)
+
+  const onBruh = () => {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, {isBruh: !isBruh}, () => null);
+    });
+    setIsBruh(!isBruh)
+  }
   return (
     <div className="App">
         <FormControlLabel
-        control={<PurpleSwitch checked={isBruh} onChange={() => setIsBruh(!isBruh)} name="bruhSwitch" />}
+        control={<PurpleSwitch checked={isBruh} onChange={onBruh} name="bruhSwitch" />}
         label="Bruhify contents"
       />
     </div>
