@@ -1,5 +1,5 @@
-const DEFAULT_ELEMENT_THRESHOLD = 0.05;
-const DEFAULT_WORD_THRESHOLD = 0.01;
+const DEFAULT_ELEMENT_THRESHOLD = 0.3;
+const DEFAULT_WORD_THRESHOLD = 0.5;
 
 const getSafeThreshold = (argThreshold) =>
   argThreshold > 1 || argThreshold < 0
@@ -95,4 +95,10 @@ const bruhify = ({
   });
 };
 
-bruhify({});
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if(request.isBruh) {
+      bruhify({});
+    }
+  }
+);
